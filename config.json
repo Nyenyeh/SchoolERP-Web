@@ -1,0 +1,14 @@
+{
+  "version": "6.2.1",
+  "release_date": "08/07/2021",
+  "migrations": [
+	"database/migrations/2021_04_29_103755_create_edu_update_version621_table.php",
+  "database/migrations/2021_06_26_084430_add_assign_id_to_sm_fees_payments.php",
+  "database/migrations/2021_06_26_110858_add_assign_id_to_sm_bank_payment_slips.php", 
+  "Modules/MenuManage/Database/Migrations/2021_06_13_044854_create_sidebar_news_table.php",
+  "Modules/StudentAbsentNotification/Database/Migrations/2021_02_10_110920_create_absent_notification_time_setups_table.php"
+	
+  ],
+  "url": "https://spondonit.com/contact",
+  "notes": "This is a bug fixing update."
+}
