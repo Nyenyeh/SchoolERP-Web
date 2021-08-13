@@ -381,7 +381,7 @@ class SmStudentAdmissionController extends Controller
                     'gender' => 'required',
                     'first_name' => 'required|max:100',
                     'date_of_birth' => 'required',
-                    'guardians_email' => "required",
+                    'guardians_email' => "sometimes|nullable|email",
                     'document_file_1' => "sometimes|nullable|mimes:pdf,doc,docx,jpg,jpeg,png,txt",
                     'document_file_2' => "sometimes|nullable|mimes:pdf,doc,docx,jpg,jpeg,png,txt",
                     'document_file_3' => "sometimes|nullable|mimes:pdf,doc,docx,jpg,jpeg,png,txt",
@@ -1721,7 +1721,7 @@ class SmStudentAdmissionController extends Controller
                     'gender' => 'required',
                     'first_name' => 'required|max:100',
                     'date_of_birth' => 'required',
-                    'guardians_email' => 'required|unique:sm_parents,guardians_email,'.$student_detail->parent_id,
+                    'guardians_email' => 'sometimes|nullable|unique:sm_parents,guardians_email,'.$student_detail->parent_id,
                     'guardians_phone' => 'unique:sm_parents,guardians_mobile,'.$student_detail->parent_id
                 ],
                 [
@@ -1773,7 +1773,7 @@ class SmStudentAdmissionController extends Controller
                     'gender' => 'required',
                     'first_name' => 'required|max:100',
                     'date_of_birth' => 'required',
-                    'guardians_email' => 'required|unique:sm_parents,guardians_email,'.$student_detail->parent_id,
+                    'guardians_email' => 'sometimes|nullable|unique:sm_parents,guardians_email,'.$student_detail->parent_id,
                     'guardians_phone' => 'unique:sm_parents,guardians_mobile,'.$student_detail->parent_id,
                     'document_file_1' => "sometimes|nullable|mimes:pdf,doc,docx,jpg,jpeg,png,txt",
                     'document_file_2' => "sometimes|nullable|mimes:pdf,doc,docx,jpg,jpeg,png,txt",
